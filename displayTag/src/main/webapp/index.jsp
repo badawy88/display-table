@@ -8,7 +8,9 @@
 </head>
 <body>
 	<h2>User Data</h2>
-	<%request.setAttribute("userdata", UserData.getUserList()); %>
+	<%
+		request.setAttribute("userdata", UserData.getUserList());
+	%>
 	<display:table id="data" name="userdata"
 		decorator="com.edu.displaytag.decorator.UserDecorator" pagesize="10">
 		<display:column property="userId" title="ID" sortable="true" />
